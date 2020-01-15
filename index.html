@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="./02_Function.js"></script>
+</head>
+
+<body>
+    <p>
+        <h1>Login Form</h1>
+    </p>
+
+    <!--   <a href="#" onClick="alert('Hi');"> Click</a> 
+    <a href="JavaScript:void(0)" onClick="popup('Hi');">Click</a>
+    <input type="button" value="Cli" onClick="alert('Hello world!');">
+    <a href="https://www.google.com"><img src="download.jpg"></a>
+    <img src="download.jpg" onMouseover="src='down.jpg'">        
+
+
+    <h1 onMouseover="alert('Be sure to get your shopping done today.');">World Ends Tomorrow</h1> 
+    <a href="index.html" onMouseover="this.style.color='green';">Home Page</a> 
+
+    
+-->
+
+    <p>This is <em>important</em>!</p>
+    <p>Southern Cal is sunny.</p>
+
+
+    <div id="cal">
+        <p>Southern Cal is sunny.</p>
+
+        <p>Northern Cal is rainy.</p>
+        <p>Eastern Cal is desert.</p>
+    </div>
+    <div id="ny">
+        <p>Urban NY is crowded.</p>
+        <p>Rural NY is sparse.</p>
+    </div>
+
+
+    <form>
+
+        Email <br>
+        <input type="text" id="Email" value=""> <br>
+        Password <br>
+        <input type="password" id="Password">
+        <input type="button" value="Submit" onClick="checkAddress('Email','Password');">
+
+
+
+    </form>
+
+    <!-- <form>
+
+
+        ZIP <br>
+        <input type="text" id="Zip" onblur="cityName();"> <br>
+        CITY <br>
+        <input type="text" id="City">
+        
+
+
+
+    </form> -->
+
+
+
+
+</html>
+
+<script>
+
+
+    var p = document.getElementsByTagName("p");
+     var contents = p[2].innerHTML;
+     //alert(contents);
+
+    function checkAddress(email_id, pass_id) {
+        if (document.getElementById(email_id).value === "" && document.getElementById(pass_id).value === "") { alert(" Type your Email And Password"); }
+
+        else if (document.getElementById(email_id).value === "") {
+            alert("Type your email");
+        }
+
+        else if (document.getElementById(pass_id).value === "") {
+            alert("Type your password");
+        }
+        else {
+            alert("Success");
+        }
+
+
+
+
+
+
+
+        function cityName() {
+
+            if (document.getElementById("Zip").value == "") {
+                alert("Fill the Zip");
+                return;
+            }
+            var cname;
+            var zipentered = document.getElementById("Zip").value;
+            cname = "Karachi";
+            document.getElementById("City").value = cname;
+        }
+
+
+
+
+    }
+
+
+</script>
